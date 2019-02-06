@@ -33,6 +33,7 @@ def create_editor_blueprint(app):
             app.config["RECORDS_EDITOR_TEMPLATE"],
             editor_url=app.config["RECORDS_EDITOR_URL_PREFIX"],
             module_name="Invenio-Records-Editor",
+            records_editor_config=app.config["RECORDS_EDITOR_CONFIG"],
         )
 
     return blueprint

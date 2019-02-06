@@ -34,6 +34,8 @@ under the terms of the MIT License; see LICENSE file for more details.
     <script src="{{ ASSET_URL }}"></script>
     {% endassets %}
     {%- endblock javascript %}
+    <!-- The input below will be parsed from angular editor -->
+    <input type="hidden" id="invenio-records-editor" #invenio-records-editor data-config='{{records_editor_config | tojson | safe}}'>
   </body>
 
 </html>

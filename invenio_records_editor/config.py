@@ -18,3 +18,6 @@ RECORDS_EDITOR_VIEW_PERMISSION = allow_all
 
 RECORDS_EDITOR_TEMPLATE = "invenio_records_editor/editor.html"
 """Default editor template."""
+
+RECORDS_EDITOR_CONFIG = {"default": {"enableAdminModeSwitch": True}}
+"""Default configuration for editor. We can supply config per record type."""
