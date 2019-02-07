@@ -25,9 +25,9 @@ def create_editor_blueprint(app):
         static_folder="static",
     )
 
-    @blueprint.route("/")
+    @blueprint.route("/<string:rec_type>/<int:rec_id>")
     @need_editor_permissions("editor-view")
-    def index():
+    def index(rec_type, rec_id):
         """Render a basic view, with dummy permission editor-view."""
         return render_template(
             app.config["RECORDS_EDITOR_TEMPLATE"],
